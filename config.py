@@ -16,13 +16,17 @@ OPENID_PROVIDERS = [
 
 
 # mail server settings
-MAIL_SERVER = 'localhost'
-MAIL_PORT = 1030
-MAIL_USERNAME = None
-MAIL_PASSWORD = None
+MAIL_SERVER = 'smtp.googlemail.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
+MAIL_USERNAME = "proulx.louis@gmail.com"
+MAIL_PASSWORD = "7379samo5010"
+#MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+#MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 
 # administrator list
-ADMINS = ['you@example.com']
+ADMINS = ['proulx.louis@gmail.com']
 
 # pagination
 POSTS_PER_PAGE = 3
