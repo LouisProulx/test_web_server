@@ -16,6 +16,10 @@ lm.init_app(app)
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 lm.login_view = 'login'
 
+from .momentjs import momentjs
+
+app.jinja_env.globals['momentjs'] = momentjs
+
 if not app.debug:
     import logging
     from logging.handlers import SMTPHandler
